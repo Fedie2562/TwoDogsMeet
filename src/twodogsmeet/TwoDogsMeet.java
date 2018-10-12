@@ -23,6 +23,7 @@ public class TwoDogsMeet {
         Dog dog2 = new Dog(JOptionPane.showInputDialog("Please enter the name of dog2"),
             (JOptionPane.showInputDialog("Enter the breed of dog 2")));
         System.out.println("The two dogs meet");
+        dog1.meet(dog2);
     }
     
 }

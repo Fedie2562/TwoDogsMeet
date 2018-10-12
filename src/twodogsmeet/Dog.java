@@ -36,4 +36,23 @@ public class Dog {
     public Dog(int agr,int hung){
         
     }
+    public void meet(Dog otherDog){
+        // Aggression check
+        if(this.aggression>otherDog.aggression){
+            System.out.println(this.name+" is barking at "+otherDog.name);
+        }else if(this.aggression<otherDog.aggression){
+            System.out.println(this.name+" is being barked at by "+otherDog.name);
+        }else{
+            System.out.println(this.name+" and "+otherDog.name+" are not barking at all");
+        }
+        // Hunger check
+        System.out.println("The owner drops some treats for the two dogs");
+        if(this.hunger>otherDog.hunger&&this.hunger>3){
+            System.out.println(this.name+" rushes to eat all of the treats before "+otherDog.name+" reacts");
+        }else if(this.hunger<otherDog.hunger&&otherDog.hunger>3){
+            System.out.println(otherDog.name+" rushes to eat all of the treats before "+this.name+" could react");
+        }else{
+            System.out.println(this.name+" and "+otherDog.name+" enjoy the treats together");
+        }
+    }
 }
